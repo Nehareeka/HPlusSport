@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "http://localhost:5269";
+        options.Authority = "https://localhost:7269";
         options.RequireHttpsMetadata = false;
         options.Audience = "hps-api";
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters

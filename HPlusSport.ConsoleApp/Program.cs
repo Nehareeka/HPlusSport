@@ -12,11 +12,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             var discoveryDocument = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
-                Address = "http://localhost:5269",
+                Address = "https://localhost:7269",
                 Policy =
                 {
-                    ValidateIssuerName = false,
-                    RequireHttps = false,
                     RequireKeySet = false  
                 }
             });
