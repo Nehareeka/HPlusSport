@@ -12,7 +12,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             var discoveryDocument = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
-                Address = "http://localhost:7269",
+                Address = "http://localhost:5269",
                 Policy =
                 {
                     ValidateIssuerName = false,
@@ -28,7 +28,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 ClientSecret = "H+ Sport",
                 Scope = "hps-api"
             });
-            Console.WriteLine($"Token : {tokenResponse}");
+            Console.WriteLine($"Token : {tokenResponse.AccessToken}");
         }
     }
 }
